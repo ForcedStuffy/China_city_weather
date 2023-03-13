@@ -66,4 +66,4 @@ def page_simple_layout(city, words_count, time_list, high_temperature, low_tempe
         line_markpoint(city, time_list, high_temperature, low_temperature),
         WordCloud_(city, words_count),
     )
-    page.render(f"D:/pythonProject/show/{city}.html")
+    page.render(f"dataShow/{city}.html")

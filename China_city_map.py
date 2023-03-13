@@ -24,10 +24,10 @@ def map_city(city_URL):
 
 
 if __name__ == "__main__":
-    dirs = os.listdir('D:/pythonProject/show')
+    dirs = os.listdir('E:/dataSave')
     city_URL = []
     for filename in dirs:
-        path = 'D:/pythonProject/show/' + filename
+        path = 'E:/dataSave/' + filename
         city = re.findall(r"[\u4e00-\u9fff]+", path)[0]
         city_URL.append([city, path])
 

@@ -6,11 +6,11 @@ import pandas as pd
 from city_data_show import page_simple_layout
 
 if __name__ == "__main__":
-    dirs = os.listdir('D:/dataSave')
+    dirs = os.listdir('E:/dataSave')
     for filename in dirs:
-        path = 'D:/dataSave/' + filename
+        path = 'E:/dataSave/' + filename
         city = re.findall(r"历史天气(.*?).csv", path)[0]
-        data = pd.read_csv(path, encoding='utf-8')
+        data = pd.read_csv(path, encoding='gbk')
 
         data['日期时间'] = data['日期时间'].apply(lambda x: pd.to_datetime(x, format="%Y%m%d"))
         data['日期时间'] = data['日期时间'].dt.date
